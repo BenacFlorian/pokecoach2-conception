@@ -39,6 +39,11 @@ REVOKE DELETE ON core.teams, core.matchups, core.matchup_runs FROM authenticated
 
 GRANT SELECT ON core.teams, core.matchups TO pokecoach_worker;
 GRANT SELECT, INSERT, UPDATE ON core.matchup_runs TO pokecoach_worker;
+GRANT SELECT, INSERT ON core.analysis_commands TO pokecoach_worker;
+GRANT SELECT, INSERT ON core.matchup_run_battles TO pokecoach_worker;
+
+REVOKE ALL ON TABLE core.analysis_commands FROM PUBLIC, authenticated_user;
+REVOKE ALL ON TABLE core.matchup_run_battles FROM PUBLIC, authenticated_user;
 
 REVOKE ALL ON TABLE core.stack_sentinel FROM authenticated_user, pokecoach_worker;
 
@@ -47,12 +52,15 @@ GRANT EXECUTE ON FUNCTION core.matchups_latest_successful_run(core.matchups) TO 
 REVOKE ALL ON FUNCTION core.is_valid_pokemon_sets(jsonb) FROM PUBLIC;
 REVOKE ALL ON FUNCTION core.is_valid_pokemon_slot_entry(jsonb) FROM PUBLIC;
 REVOKE ALL ON FUNCTION core.is_valid_mock_report_v1(jsonb) FROM PUBLIC;
+REVOKE ALL ON FUNCTION core.is_valid_simulation_result_v2(jsonb, boolean) FROM PUBLIC;
 REVOKE ALL ON FUNCTION core.current_actor() FROM PUBLIC;
 REVOKE ALL ON FUNCTION core.team_row_to_snapshot_v1(core.teams) FROM PUBLIC;
 
 GRANT EXECUTE ON FUNCTION core.is_valid_pokemon_sets(jsonb) TO authenticated_user, pokecoach_worker;
 GRANT EXECUTE ON FUNCTION core.current_actor() TO authenticated_user, pokecoach_worker;
 GRANT EXECUTE ON FUNCTION core.is_valid_pokemon_slot_entry(jsonb) TO authenticated_user, pokecoach_worker;
+GRANT EXECUTE ON FUNCTION core.is_valid_simulation_result_v2(jsonb, boolean) TO authenticated_user, pokecoach_worker;
+GRANT EXECUTE ON FUNCTION core.team_row_to_snapshot_v1(core.teams) TO pokecoach_worker;
 
 COMMENT ON TABLE core.matchup_runs IS E'@omit create,update,delete';
 
