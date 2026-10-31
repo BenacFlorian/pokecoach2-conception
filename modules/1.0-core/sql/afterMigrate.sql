@@ -51,6 +51,8 @@ REVOKE ALL ON FUNCTION core.current_actor() FROM PUBLIC;
 REVOKE ALL ON FUNCTION core.team_row_to_snapshot_v1(core.teams) FROM PUBLIC;
 
 GRANT EXECUTE ON FUNCTION core.is_valid_pokemon_sets(jsonb) TO authenticated_user, pokecoach_worker;
+GRANT EXECUTE ON FUNCTION core.current_actor() TO authenticated_user, pokecoach_worker;
+GRANT EXECUTE ON FUNCTION core.is_valid_pokemon_slot_entry(jsonb) TO authenticated_user, pokecoach_worker;
 
 COMMENT ON TABLE core.matchup_runs IS E'@omit create,update,delete';
 

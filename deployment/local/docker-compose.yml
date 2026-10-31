@@ -79,6 +79,9 @@ services:
 
   angular:
     profiles: ["frontend"]
+    depends_on:
+      postgraphile:
+        condition: service_started
     build:
       context: ../../..
       dockerfile: pokecoach2-conception/docker/angular.Dockerfile
