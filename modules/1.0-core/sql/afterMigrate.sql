@@ -38,6 +38,7 @@ GRANT UPDATE (regulation, is_deleted) ON core.matchups TO authenticated_user;
 REVOKE DELETE ON core.teams, core.matchups, core.matchup_runs FROM authenticated_user;
 
 GRANT SELECT ON core.teams, core.matchups TO pokecoach_worker;
+GRANT UPDATE (regulation) ON core.matchups TO pokecoach_worker;
 GRANT SELECT, INSERT, UPDATE ON core.matchup_runs TO pokecoach_worker;
 GRANT SELECT, INSERT ON core.analysis_commands TO pokecoach_worker;
 GRANT SELECT, INSERT ON core.matchup_run_battles TO pokecoach_worker;

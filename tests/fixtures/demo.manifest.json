@@ -4,132 +4,138 @@
     {
       "id": "a1111111-1111-4111-8111-111111111101",
       "kind": "owned",
-      "name": "Chompy — VR Top 4 (Reg MC)",
+      "name": "jit_vgc — Worlds 2026 (Reg MB)",
       "sourceKind": "text",
-      "sourceUrl": "https://pokepast.es/9d3c3ee9e145f6b8",
-      "sourceText": "Farigiraf @ Sitrus Berry\nAbility: Armor Tail\nLevel: 50\nEVs: 29 HP / 22 Def / 15 SpD\nCalm Nature\n- Protect\n- Psychic\n- Trick Room\n- Helping Hand\n\nCamerupt @ Cameruptite\nAbility: Solid Rock\nLevel: 50\nEVs: 32 HP / 2 Def / 32 SpA\nQuiet Nature\n- Protect\n- Heat Wave\n- Ancient Power\n- Earth Power\n\nSylveon @ Fairy Feather\nAbility: Pixilate\nLevel: 50\nEVs: 31 HP / 13 Def / 21 SpA / 1 SpD\nModest Nature\n- Protect\n- Moonblast\n- Hyper Voice\n- Calm Mind\n\nRaichu @ Raichunite Y\nAbility: Lightning Rod\nLevel: 50\nEVs: 30 HP / 12 Def / 24 Spe\nTimid Nature\n- Protect\n- Fake Out\n- Zap Cannon\n- Focus Blast\n\nIncineroar @ Charcoal\nAbility: Intimidate\nLevel: 50\nEVs: 32 HP / 32 Atk / 2 SpD\nBrave Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat\n\nRillaboom @ Life Orb\nAbility: Grassy Surge\nLevel: 50\nEVs: 32 HP / 27 Atk / 6 SpD / 1 Spe\nAdamant Nature\n- Grassy Glide\n- Fake Out\n- Wood Hammer\n- U-turn",
+      "sourceUrl": "https://pokepast.es/e46c2a79dcd8d00c",
+      "sourceText": "Excadrill (F) @ Focus Sash\nAbility: Sand Rush\nLevel: 50\nEVs: 2 HP / 32 Atk / 32 Spe\nAdamant Nature\n- High Horsepower\n- Rock Slide\n- Iron Head\n- Protect\n\nTyranitar (M) @ Tyranitarite\nAbility: Sand Stream\nLevel: 50\nEVs: 16 HP / 18 Atk / 32 Spe\nJolly Nature\n- Rock Slide\n- Protect\n- Knock Off\n- Low Kick\n\nSinistcha @ Colbur Berry\nAbility: Hospitality\nLevel: 50\nEVs: 29 HP / 15 Def / 22 SpD\nBold Nature\n- Rage Powder\n- Trick Room\n- Matcha Gotcha\n- Protect\n\nStaraptor (M) @ Staraptite\nAbility: Intimidate\nLevel: 50\nEVs: 21 HP / 11 Atk / 2 SpD / 32 Spe\nJolly Nature\n- Brave Bird\n- Tailwind\n- Protect\n- Close Combat\n\nMilotic (M) @ Sitrus Berry\nAbility: Competitive\nLevel: 50\nEVs: 30 HP / 21 Def / 2 SpD / 13 Spe\nBold Nature\n- Scald\n- Icy Wind\n- Ice Beam\n- Protect\n\nGholdengo @ Life Orb\nAbility: Good as Gold\nLevel: 50\nEVs: 27 HP / 13 Def / 7 SpA / 10 SpD / 9 Spe\nModest Nature\n- Make It Rain\n- Shadow Ball\n- Nasty Plot\n- Protect",
       "pokemon": [
         {
           "slot": 0,
-          "species": "Farigiraf",
-          "item": "Sitrus Berry",
-          "ability": "Armor Tail",
-          "level": 50,
-          "nature": "Calm",
-          "evs": {
-            "HP": 29,
-            "Def": 22,
-            "SpD": 15
-          },
-          "moves": [
-            "Protect",
-            "Psychic",
-            "Trick Room",
-            "Helping Hand"
-          ],
-          "rawBlock": "Farigiraf @ Sitrus Berry\nAbility: Armor Tail\nLevel: 50\nEVs: 29 HP / 22 Def / 15 SpD\nCalm Nature\n- Protect\n- Psychic\n- Trick Room\n- Helping Hand"
-        },
-        {
-          "slot": 1,
-          "species": "Camerupt",
-          "item": "Cameruptite",
-          "ability": "Solid Rock",
-          "level": 50,
-          "nature": "Quiet",
-          "evs": {
-            "HP": 32,
-            "Def": 2,
-            "SpA": 32
-          },
-          "moves": [
-            "Protect",
-            "Heat Wave",
-            "Ancient Power",
-            "Earth Power"
-          ],
-          "rawBlock": "Camerupt @ Cameruptite\nAbility: Solid Rock\nLevel: 50\nEVs: 32 HP / 2 Def / 32 SpA\nQuiet Nature\n- Protect\n- Heat Wave\n- Ancient Power\n- Earth Power"
-        },
-        {
-          "slot": 2,
-          "species": "Sylveon",
-          "item": "Fairy Feather",
-          "ability": "Pixilate",
-          "level": 50,
-          "nature": "Modest",
-          "evs": {
-            "HP": 31,
-            "Def": 13,
-            "SpA": 21,
-            "SpD": 1
-          },
-          "moves": [
-            "Protect",
-            "Moonblast",
-            "Hyper Voice",
-            "Calm Mind"
-          ],
-          "rawBlock": "Sylveon @ Fairy Feather\nAbility: Pixilate\nLevel: 50\nEVs: 31 HP / 13 Def / 21 SpA / 1 SpD\nModest Nature\n- Protect\n- Moonblast\n- Hyper Voice\n- Calm Mind"
-        },
-        {
-          "slot": 3,
-          "species": "Raichu",
-          "item": "Raichunite Y",
-          "ability": "Lightning Rod",
-          "level": 50,
-          "nature": "Timid",
-          "evs": {
-            "HP": 30,
-            "Def": 12,
-            "Spe": 24
-          },
-          "moves": [
-            "Protect",
-            "Fake Out",
-            "Zap Cannon",
-            "Focus Blast"
-          ],
-          "rawBlock": "Raichu @ Raichunite Y\nAbility: Lightning Rod\nLevel: 50\nEVs: 30 HP / 12 Def / 24 Spe\nTimid Nature\n- Protect\n- Fake Out\n- Zap Cannon\n- Focus Blast"
-        },
-        {
-          "slot": 4,
-          "species": "Incineroar",
-          "item": "Charcoal",
-          "ability": "Intimidate",
-          "level": 50,
-          "nature": "Brave",
-          "evs": {
-            "HP": 32,
-            "Atk": 32,
-            "SpD": 2
-          },
-          "moves": [
-            "Fake Out",
-            "Parting Shot",
-            "Flare Blitz",
-            "Darkest Lariat"
-          ],
-          "rawBlock": "Incineroar @ Charcoal\nAbility: Intimidate\nLevel: 50\nEVs: 32 HP / 32 Atk / 2 SpD\nBrave Nature\n- Fake Out\n- Parting Shot\n- Flare Blitz\n- Darkest Lariat"
-        },
-        {
-          "slot": 5,
-          "species": "Rillaboom",
-          "item": "Life Orb",
-          "ability": "Grassy Surge",
+          "species": "Excadrill",
+          "gender": "F",
+          "item": "Focus Sash",
+          "ability": "Sand Rush",
           "level": 50,
           "nature": "Adamant",
           "evs": {
-            "HP": 32,
-            "Atk": 27,
-            "SpD": 6,
-            "Spe": 1
+            "HP": 2,
+            "Atk": 32,
+            "Spe": 32
           },
           "moves": [
-            "Grassy Glide",
-            "Fake Out",
-            "Wood Hammer",
-            "U-turn"
+            "High Horsepower",
+            "Rock Slide",
+            "Iron Head",
+            "Protect"
           ],
-          "rawBlock": "Rillaboom @ Life Orb\nAbility: Grassy Surge\nLevel: 50\nEVs: 32 HP / 27 Atk / 6 SpD / 1 Spe\nAdamant Nature\n- Grassy Glide\n- Fake Out\n- Wood Hammer\n- U-turn"
+          "rawBlock": "Excadrill (F) @ Focus Sash\nAbility: Sand Rush\nLevel: 50\nEVs: 2 HP / 32 Atk / 32 Spe\nAdamant Nature\n- High Horsepower\n- Rock Slide\n- Iron Head\n- Protect"
+        },
+        {
+          "slot": 1,
+          "species": "Tyranitar",
+          "gender": "M",
+          "item": "Tyranitarite",
+          "ability": "Sand Stream",
+          "level": 50,
+          "nature": "Jolly",
+          "evs": {
+            "HP": 16,
+            "Atk": 18,
+            "Spe": 32
+          },
+          "moves": [
+            "Rock Slide",
+            "Protect",
+            "Knock Off",
+            "Low Kick"
+          ],
+          "rawBlock": "Tyranitar (M) @ Tyranitarite\nAbility: Sand Stream\nLevel: 50\nEVs: 16 HP / 18 Atk / 32 Spe\nJolly Nature\n- Rock Slide\n- Protect\n- Knock Off\n- Low Kick"
+        },
+        {
+          "slot": 2,
+          "species": "Sinistcha",
+          "item": "Colbur Berry",
+          "ability": "Hospitality",
+          "level": 50,
+          "nature": "Bold",
+          "evs": {
+            "HP": 29,
+            "Def": 15,
+            "SpD": 22
+          },
+          "moves": [
+            "Rage Powder",
+            "Trick Room",
+            "Matcha Gotcha",
+            "Protect"
+          ],
+          "rawBlock": "Sinistcha @ Colbur Berry\nAbility: Hospitality\nLevel: 50\nEVs: 29 HP / 15 Def / 22 SpD\nBold Nature\n- Rage Powder\n- Trick Room\n- Matcha Gotcha\n- Protect"
+        },
+        {
+          "slot": 3,
+          "species": "Staraptor",
+          "gender": "M",
+          "item": "Staraptite",
+          "ability": "Intimidate",
+          "level": 50,
+          "nature": "Jolly",
+          "evs": {
+            "HP": 21,
+            "Atk": 11,
+            "SpD": 2,
+            "Spe": 32
+          },
+          "moves": [
+            "Brave Bird",
+            "Tailwind",
+            "Protect",
+            "Close Combat"
+          ],
+          "rawBlock": "Staraptor (M) @ Staraptite\nAbility: Intimidate\nLevel: 50\nEVs: 21 HP / 11 Atk / 2 SpD / 32 Spe\nJolly Nature\n- Brave Bird\n- Tailwind\n- Protect\n- Close Combat"
+        },
+        {
+          "slot": 4,
+          "species": "Milotic",
+          "gender": "M",
+          "item": "Sitrus Berry",
+          "ability": "Competitive",
+          "level": 50,
+          "nature": "Bold",
+          "evs": {
+            "HP": 30,
+            "Def": 21,
+            "SpD": 2,
+            "Spe": 13
+          },
+          "moves": [
+            "Scald",
+            "Icy Wind",
+            "Ice Beam",
+            "Protect"
+          ],
+          "rawBlock": "Milotic (M) @ Sitrus Berry\nAbility: Competitive\nLevel: 50\nEVs: 30 HP / 21 Def / 2 SpD / 13 Spe\nBold Nature\n- Scald\n- Icy Wind\n- Ice Beam\n- Protect"
+        },
+        {
+          "slot": 5,
+          "species": "Gholdengo",
+          "item": "Life Orb",
+          "ability": "Good as Gold",
+          "level": 50,
+          "nature": "Modest",
+          "evs": {
+            "HP": 27,
+            "Def": 13,
+            "SpA": 7,
+            "SpD": 10,
+            "Spe": 9
+          },
+          "moves": [
+            "Make It Rain",
+            "Shadow Ball",
+            "Nasty Plot",
+            "Protect"
+          ],
+          "rawBlock": "Gholdengo @ Life Orb\nAbility: Good as Gold\nLevel: 50\nEVs: 27 HP / 13 Def / 7 SpA / 10 SpD / 9 Spe\nModest Nature\n- Make It Rain\n- Shadow Ball\n- Nasty Plot\n- Protect"
         }
       ],
       "createdAt": "2026-10-01T10:00:00.000Z"
@@ -1418,7 +1424,7 @@
           0,
           2
         ],
-        "justification": "Lead Farigiraf/Sylveon recommandé sur l’échantillon fictif (56 % de victoires).",
+        "justification": "Lead Excadrill/Sinistcha recommandé sur l’échantillon fictif (56 % de victoires).",
         "selectionResults": [
           {
             "opponentLeadId": "lead-salamence-kingambit",
@@ -1533,7 +1539,7 @@
                   "side": "ours",
                   "slot": 0
                 },
-                "move": "Protect",
+                "move": "High Horsepower",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1550,7 +1556,7 @@
                   "side": "ours",
                   "slot": 2
                 },
-                "move": "Protect",
+                "move": "Rage Powder",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1563,11 +1569,11 @@
               }
             ],
             "alternatives": [
-              "Pivoter Farigiraf après Hyper Voice adverse.",
-              "Conserver Sylveon si Kowtow Cleave vise un allié."
+              "Pivoter Excadrill après Hyper Voice adverse.",
+              "Conserver Sinistcha si Kowtow Cleave vise un allié."
             ],
             "adaptations": [
-              "Anticiper Hyper Voice + Kowtow Cleave avec spread depuis Raichu."
+              "Anticiper Hyper Voice + Kowtow Cleave avec spread depuis Staraptor."
             ]
           },
           {
@@ -1579,7 +1585,7 @@
                   "side": "ours",
                   "slot": 0
                 },
-                "move": "Protect",
+                "move": "High Horsepower",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1596,7 +1602,7 @@
                   "side": "ours",
                   "slot": 2
                 },
-                "move": "Protect",
+                "move": "Rage Powder",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1609,11 +1615,11 @@
               }
             ],
             "alternatives": [
-              "Pivoter Farigiraf après Hyper Voice adverse.",
-              "Conserver Sylveon si Power Gem vise un allié."
+              "Pivoter Excadrill après Hyper Voice adverse.",
+              "Conserver Sinistcha si Power Gem vise un allié."
             ],
             "adaptations": [
-              "Anticiper Hyper Voice + Power Gem avec spread depuis Raichu."
+              "Anticiper Hyper Voice + Power Gem avec spread depuis Staraptor."
             ]
           },
           {
@@ -1625,7 +1631,7 @@
                   "side": "ours",
                   "slot": 0
                 },
-                "move": "Protect",
+                "move": "High Horsepower",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1642,7 +1648,7 @@
                   "side": "ours",
                   "slot": 2
                 },
-                "move": "Protect",
+                "move": "Rage Powder",
                 "targets": [
                   {
                     "kind": "pokemon",
@@ -1655,19 +1661,19 @@
               }
             ],
             "alternatives": [
-              "Pivoter Farigiraf après Power Gem adverse.",
-              "Conserver Sylveon si Superpower vise un allié."
+              "Pivoter Excadrill après Power Gem adverse.",
+              "Conserver Sinistcha si Superpower vise un allié."
             ],
             "adaptations": [
-              "Anticiper Power Gem + Superpower avec spread depuis Raichu."
+              "Anticiper Power Gem + Superpower avec spread depuis Staraptor."
             ]
           }
         ]
       },
       "gameplan": {
-        "opening": "Ouvrir avec Farigiraf et Sylveon pour absorber la pression de Salamence.",
-        "midgame": "Utiliser Raichu pour contrôler le tempo une fois les leads adverses identifiés.",
-        "endgame": "Clôturer avec Rillaboom si Volcarona est encore en jeu.",
+        "opening": "Ouvrir avec Excadrill et Sinistcha pour absorber la pression de Salamence.",
+        "midgame": "Utiliser Staraptor pour contrôler le tempo une fois les leads adverses identifiés.",
+        "endgame": "Clôturer avec Gholdengo si Volcarona est encore en jeu.",
         "threats": [
           {
             "label": "Kingambit",
@@ -1679,25 +1685,25 @@
           }
         ],
         "preserve": [
-          "Farigiraf",
-          "Raichu"
+          "Excadrill",
+          "Staraptor"
         ],
         "eliminate": [
           "Kingambit",
           "Glimmora"
         ],
         "adaptations": [
-          "Basculer Incineroar si Rillaboom impose Tailwind."
+          "Basculer Milotic si Rillaboom impose Tailwind."
         ],
-        "winCondition": "Empêcher Kingambit de sweep après la phase midgame ; conserver Farigiraf pour le clutch.",
+        "winCondition": "Empêcher Kingambit de sweep après la phase midgame ; conserver Excadrill pour le clutch.",
         "refinementSequences": [
           {
             "label": "Séquence D-1",
-            "detail": "Sylveon reste en lead si Salamence part en back (10 parties fictives)."
+            "detail": "Sinistcha reste en lead si Salamence part en back (10 parties fictives)."
           },
           {
             "label": "Séquence D-2",
-            "detail": "Tera Farigiraf utilisé contre Glimmora dans 6/10 affinages simulés."
+            "detail": "Tera Excadrill utilisé contre Glimmora dans 6/10 affinages simulés."
           }
         ],
         "sampleLimitation": "Échantillon de démonstration : les fréquences illustrent un futur modèle, pas le meta réel."
