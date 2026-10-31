@@ -252,6 +252,105 @@ $$;
 RESET ROLE;
 
 DO $$
+DECLARE
+  owned_id uuid;
+  opp_id uuid;
+  matchup_id uuid;
+  run_id uuid;
+  phase_ab jsonb;
+  phase_c jsonb;
+BEGIN
+  INSERT INTO core.teams (kind, name, source_kind, source_text, pokemon)
+  VALUES (
+    'owned',
+    'C owned',
+    'text',
+    'paste',
+    (
+      SELECT jsonb_agg(
+        jsonb_build_object(
+          'slot', gs,
+          'species', 'C' || gs,
+          'moves', jsonb_build_array('Protect'),
+          'rawBlock', 'b'
+        ) ORDER BY gs
+      )
+      FROM generate_series(0, 5) gs
+    )
+  )
+  RETURNING id INTO owned_id;
+
+  INSERT INTO core.teams (kind, name, source_kind, source_text, pokemon)
+  VALUES (
+    'opponent',
+    'C opp',
+    'text',
+    'paste',
+    (
+      SELECT jsonb_agg(
+        jsonb_build_object(
+          'slot', gs,
+          'species', 'D' || gs,
+          'moves', jsonb_build_array('Protect'),
+          'rawBlock', 'b'
+        ) ORDER BY gs
+      )
+      FROM generate_series(0, 5) gs
+    )
+  )
+  RETURNING id INTO opp_id;
+
+  INSERT INTO core.matchups (our_team_id, opponent_team_id, regulation)
+  VALUES (owned_id, opp_id, 'regf')
+  RETURNING id INTO matchup_id;
+
+  phase_ab := '{
+    "schemaVersion": 2,
+    "source": "simulation",
+    "completedPhases": ["A", "B"],
+    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10, "turn1": {"sampleSize": 3, "jointActions": [], "backPairs": [], "backSlotMarginals": [], "endStateNotes": []}}]},
+    "leadPick": null,
+    "refinement": null,
+    "gameplan": null,
+    "winCondition": null
+  }'::jsonb;
+
+  phase_c := '{
+    "schemaVersion": 2,
+    "source": "simulation",
+    "completedPhases": ["A", "B", "C"],
+    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10, "turn1": {"sampleSize": 3, "jointActions": [], "backPairs": [], "backSlotMarginals": [], "endStateNotes": []}}]},
+    "leadPick": {
+      "selection": {"ourFourSlots": [0, 1, 2, 3], "ourLeadSlots": [0, 1]},
+      "comparisons": [],
+      "firstTurns": [],
+      "selectionRuleVersion": "selection-v1",
+      "limitations": ["test"]
+    },
+    "refinement": null,
+    "gameplan": null,
+    "winCondition": null
+  }'::jsonb;
+
+  INSERT INTO core.matchup_runs (
+    matchup_id, source, status, report_version, target_phase, partial_result, parameters, provenance
+  )
+  VALUES (
+    matchup_id, 'simulation', 'running', 2, 'C', phase_ab, '{"profile":"standard"}'::jsonb, '{"origin":"test"}'::jsonb
+  )
+  RETURNING id INTO run_id;
+
+  UPDATE core.matchup_runs
+  SET partial_result = phase_c,
+      result_revision = 1,
+      status = 'paused',
+      process_status = 'PENDING GAME SIMULATIONS',
+      target_phase = 'C'
+  WHERE id = run_id;
+END
+$$;
+
+DO $$
 BEGIN
   PERFORM core.reset_demo_dataset();
 END
