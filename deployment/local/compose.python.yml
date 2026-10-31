@@ -1,0 +1,21 @@
+# Extension Python — requires POKECOACH_PYTHON_IMAGE in .env.python
+services:
+  api-python:
+    image: ${POKECOACH_PYTHON_IMAGE:?POKECOACH_PYTHON_IMAGE is required for the Python extension}
+    depends_on:
+      flyway:
+        condition: service_completed_successfully
+    restart: unless-stopped
+    logging:
+      driver: json-file
+      options:
+        max-size: "5m"
+        max-file: "3"
+    ports:
+      - "127.0.0.1:${PYTHON_API_PORT:-8042}:8000"
+    environment:
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: "5432"
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: pokecoach_worker
+      POSTGRES_PASSWORD: ${WORKER_DB_PASSWORD}

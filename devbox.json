@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.17.3/.schema/devbox.schema.json",
+  "packages": [
+    "flyway@latest",
+    "postgresql_17@latest",
+    "shellcheck@latest"
+  ],
+  "shell": {
+    "init_hook": ["echo 'pokecoach2-conception devbox' > /dev/null"],
+    "scripts": {
+      "migrate": ["./scripts/launch-flyway-on-existing-db.sh migrate"],
+      "validate": ["./scripts/launch-flyway-on-existing-db.sh validate"],
+      "info": ["./scripts/launch-flyway-on-existing-db.sh info"],
+      "dump-schema": ["./scripts/dump-only-ms-db-schema.sh"]
+    }
+  }
+}

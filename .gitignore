@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+!.env.python.example
+.devbox/
+*.log
+/tmp/
+/postgres-schema-*.sql
+/dumps/
+/postgres_data/
+*.sql.dump

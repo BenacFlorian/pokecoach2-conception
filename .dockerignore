@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.devbox/
+.git/
+*.log
+/dumps/
+/postgres-schema-*.sql
+deployment/local/postgres_data/
+tests/
+docs/plans/

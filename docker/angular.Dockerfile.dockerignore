@@ -1,0 +1,9 @@
+pokecoach2-angular/**/node_modules
+pokecoach2-angular/**/.angular
+**/.git
+**/.env
+**/.aws
+**/.codex
+**/dist
+**/coverage
+**/*.log
