@@ -12,6 +12,7 @@ DECLARE
     "completedPhases": [],
     "opponentLeads": null,
     "leadPick": null,
+    "openings": null,
     "refinement": null,
     "gameplan": null,
     "winCondition": null
@@ -222,6 +223,7 @@ DECLARE
     "completedPhases": [],
     "opponentLeads": null,
     "leadPick": null,
+    "openings": null,
     "refinement": null,
     "gameplan": null,
     "winCondition": null
@@ -257,8 +259,8 @@ DECLARE
   opp_id uuid;
   matchup_id uuid;
   run_id uuid;
-  phase_ab jsonb;
-  phase_c jsonb;
+  phase_ac jsonb;
+  phase_acb jsonb;
 BEGIN
   INSERT INTO core.teams (kind, name, source_kind, source_text, pokemon)
   VALUES (
@@ -304,28 +306,49 @@ BEGIN
   VALUES (owned_id, opp_id, 'regf')
   RETURNING id INTO matchup_id;
 
-  phase_ab := '{
+  phase_ac := '{
     "schemaVersion": 2,
     "source": "simulation",
-    "completedPhases": ["A", "B"],
-    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10, "turn1": {"sampleSize": 3, "jointActions": [], "backPairs": [], "backSlotMarginals": [], "endStateNotes": []}}]},
-    "leadPick": null,
+    "completedPhases": ["A", "C"],
+    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10}]},
+    "leadPick": {
+      "selection": {"ourFourSlots": [0, 1, 2, 3], "ourLeadSlots": [0, 1]},
+      "comparisons": [],
+      "selectionRuleVersion": "selection-v1",
+      "limitations": ["test"]
+    },
+    "openings": null,
     "refinement": null,
     "gameplan": null,
     "winCondition": null
   }'::jsonb;
 
-  phase_c := '{
+  phase_acb := '{
     "schemaVersion": 2,
     "source": "simulation",
-    "completedPhases": ["A", "B", "C"],
-    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10, "turn1": {"sampleSize": 3, "jointActions": [], "backPairs": [], "backSlotMarginals": [], "endStateNotes": []}}]},
+    "completedPhases": ["A", "C", "B"],
+    "opponentLeads": {"sampleSize": 10, "leads": [{"id": "lead-0-1", "slots": [0, 1], "count": 10}]},
     "leadPick": {
       "selection": {"ourFourSlots": [0, 1, 2, 3], "ourLeadSlots": [0, 1]},
       "comparisons": [],
-      "firstTurns": [],
       "selectionRuleVersion": "selection-v1",
       "limitations": ["test"]
+    },
+    "openings": {
+      "selection": {"ourFourSlots": [0, 1, 2, 3], "ourLeadSlots": [0, 1]},
+      "recommendationRule": "model-frequency-v1",
+      "samplingPolicy": "conditional-back-v1",
+      "byOpponentLead": [{
+        "opponentLeadId": "lead-0-1",
+        "opponentLeadSlots": [0, 1],
+        "sampleSize": 1,
+        "opponentActions": [],
+        "ourActions": [],
+        "recommendation": {"value": [], "count": 1, "sampleSize": 1},
+        "backPairs": [{"value": [2, 3], "count": 1, "sampleSize": 1}],
+        "backSlotMarginals": [],
+        "endStateNotes": []
+      }]
     },
     "refinement": null,
     "gameplan": null,
@@ -336,16 +359,16 @@ BEGIN
     matchup_id, source, status, report_version, target_phase, partial_result, parameters, provenance
   )
   VALUES (
-    matchup_id, 'simulation', 'running', 2, 'C', phase_ab, '{"profile":"standard"}'::jsonb, '{"origin":"test"}'::jsonb
+    matchup_id, 'simulation', 'running', 2, 'B', phase_ac, '{"profile":"standard"}'::jsonb, '{"origin":"test"}'::jsonb
   )
   RETURNING id INTO run_id;
 
   UPDATE core.matchup_runs
-  SET partial_result = phase_c,
+  SET partial_result = phase_acb,
       result_revision = 1,
       status = 'paused',
       process_status = 'PENDING GAME SIMULATIONS',
-      target_phase = 'C'
+      target_phase = 'B'
   WHERE id = run_id;
 END
 $$;

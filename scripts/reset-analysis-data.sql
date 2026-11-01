@@ -1,5 +1,5 @@
 -- Purge progressive analysis data while keeping teams and matchups.
--- Run once before switching to the A,C,B,D conditioned-openings contract.
+-- Run before switching to a new simulation result contract (openings, global refinement D, etc.).
 -- Execute in a single transaction (psql -1 -v ON_ERROR_STOP=1 -f ...).
 -- Uses session_replication_role=replica to bypass immutable battle/run triggers (maintenance only).
 
