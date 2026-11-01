@@ -4,6 +4,7 @@ Instructions for AI agents working on **SQL migrations and local database toolin
 
 ## Permanent rules
 
+- Git commits on this repo: use **`benacFlorian <florianbenac46@gmail.com>`** only. Never `florian.benac@webinage.fr` (see workspace rule `.cursor/rules/git-commit-author.mdc`).
 - SQL comments and repoindex profiles in **English**. Plans and user-facing README in **French** where documented.
 - Document only what the `.sql` files contain.
 - Applied migrations are **immutable**. Never hand-edit `flyway_schema_history`.
